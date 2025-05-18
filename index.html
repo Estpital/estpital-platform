@@ -167,51 +167,51 @@
                     <div class="bg-white rounded-xl shadow-2xl overflow-hidden transform hover:rotate-0 transition-transform duration-700 h-full">
                         <div class="p-3 h-full">
                             <!-- Interactive Model Container -->
-<div class="rounded-lg h-[430px] relative overflow-hidden" id="interactive-model-container">
+<div class="rounded-lg h-[430px] relative overflow-hidden bg-gradient-to-r from-teal-100 to-blue-100" id="interactive-model-container">
     <!-- Model Image -->
     <div class="absolute inset-0 flex items-center justify-center">
-        <img src="https://raw.githubusercontent.com/estpital/assets/main/human-body.png" alt="İnsan Vücudu" class="h-full object-contain" id="body-image">
+        <img src="public/assets/images/human-body.png" alt="İnsan Vücudu" class="h-full object-contain" id="body-image">
     </div>
     
     <!-- Interactive Hotspots -->
-    <div id="hotspot-face" class="absolute top-1/4 right-1/2 transform translate-x-12 -translate-y-1 z-10 hotspot">
+    <div id="hotspot-face" class="absolute top-1/4 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10 hotspot">
         <div class="relative">
             <div class="animate-ping absolute inline-flex h-full w-full rounded-full bg-teal-400 opacity-75" style="width: 20px; height: 20px;"></div>
             <div class="relative inline-flex rounded-full h-5 w-5 bg-teal-500"></div>
         </div>
-        <div class="absolute top-0 left-full ml-2 bg-white px-3 py-1 rounded-full shadow-lg text-sm font-medium text-teal-600 whitespace-nowrap border border-teal-200 opacity-0 group-hover:opacity-100 transition-opacity">
+        <div class="absolute top-0 left-full ml-2 bg-white px-3 py-1 rounded-full shadow-lg text-sm font-medium text-teal-600 whitespace-nowrap border border-teal-200 hidden group-hover:block">
             Yüz Estetiği
         </div>
     </div>
     
-    <div id="hotspot-chest" class="absolute top-1/2 right-1/2 transform translate-x-12 -translate-y-8 z-10 hotspot">
+    <div id="hotspot-chest" class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/4 z-10 hotspot">
         <div class="relative">
             <div class="animate-ping absolute inline-flex h-full w-full rounded-full bg-teal-400 opacity-75" style="width: 20px; height: 20px;"></div>
             <div class="relative inline-flex rounded-full h-5 w-5 bg-teal-500"></div>
         </div>
-        <div class="absolute top-0 left-full ml-2 bg-white px-3 py-1 rounded-full shadow-lg text-sm font-medium text-teal-600 whitespace-nowrap border border-teal-200 opacity-0 group-hover:opacity-100 transition-opacity">
+        <div class="absolute top-0 left-full ml-2 bg-white px-3 py-1 rounded-full shadow-lg text-sm font-medium text-teal-600 whitespace-nowrap border border-teal-200 hidden group-hover:block">
             Göğüs Estetiği
         </div>
     </div>
     
-    <div id="hotspot-abdomen" class="absolute top-2/3 right-1/2 transform translate-x-12 z-10 hotspot">
+    <div id="hotspot-abdomen" class="absolute top-3/4 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10 hotspot">
         <div class="relative">
             <div class="animate-ping absolute inline-flex h-full w-full rounded-full bg-teal-400 opacity-75" style="width: 20px; height: 20px;"></div>
             <div class="relative inline-flex rounded-full h-5 w-5 bg-teal-500"></div>
         </div>
-        <div class="absolute top-0 left-full ml-2 bg-white px-3 py-1 rounded-full shadow-lg text-sm font-medium text-teal-600 whitespace-nowrap border border-teal-200 opacity-0 group-hover:opacity-100 transition-opacity">
+        <div class="absolute top-0 left-full ml-2 bg-white px-3 py-1 rounded-full shadow-lg text-sm font-medium text-teal-600 whitespace-nowrap border border-teal-200 hidden group-hover:block">
             Karın Estetiği
         </div>
     </div>
-</div>
-        
-        <!-- Wave Shape Divider -->
-        <div class="absolute bottom-0 left-0 right-0">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-                <path fill="#ffffff" fill-opacity="1" d="M0,224L80,213.3C160,203,320,181,480,181.3C640,181,800,203,960,202.7C1120,203,1280,181,1360,170.7L1440,160L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z"></path>
-            </svg>
+    
+    <!-- Fallback Message -->
+    <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+        <div class="bg-white bg-opacity-80 rounded-lg p-4 shadow-md">
+            <h3 class="text-xl font-medium text-gray-700">İnteraktif İnsan Modeli</h3>
+            <p class="text-gray-500 mt-2">Vücudunuzun ilgilendiğiniz bölgesini seçin</p>
         </div>
-    </section>
+    </div>
+</div>
 
     <!-- Tedavi Kategorileri -->
     <section id="treatments" class="py-16 bg-white">
