@@ -22,6 +22,10 @@
     
     <!-- Animasyon için -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <!-- 3D Model için gerekli kütüphaneler -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/GLTFLoader.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
 </head>
 <body class="min-h-screen font-sans antialiased text-gray-800 bg-gray-50">
     <!-- Üst Bilgi Çubuğu -->
@@ -162,43 +166,41 @@
                 <div class="mt-12 relative lg:mt-0 lg:col-span-6 z-10 animate__animated animate__fadeInRight">
                     <div class="bg-white rounded-xl shadow-2xl overflow-hidden transform hover:rotate-0 transition-transform duration-700 h-full">
                         <div class="p-3 h-full">
-                            <!-- Placeholder for 3D Model -->
-                            <div class="bg-gradient-to-r from-teal-100 to-blue-100 rounded-lg h-[430px] md:h-[480px] flex items-center justify-center relative">
-                                <!-- ... mevcut içerik ... -->
-                            </div>
-                        </div>
-                    </div>
-                                
-                                <!-- Interactive Tags Around the Model -->
-                                <div class="absolute top-1/4 right-1/4 bg-white px-3 py-1 rounded-full shadow-lg text-sm font-medium text-teal-600 flex items-center border border-teal-200 cursor-pointer hover:bg-teal-50 transition-colors">
-                                    <span class="mr-2">Yüz</span>
-                                    <span class="flex h-4 w-4 relative">
-                                        <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-teal-400 opacity-75"></span>
-                                        <span class="relative inline-flex rounded-full h-4 w-4 bg-teal-500"></span>
-                                    </span>
-                                </div>
-                                
-                                <div class="absolute top-1/2 left-1/4 bg-white px-3 py-1 rounded-full shadow-lg text-sm font-medium text-teal-600 flex items-center border border-teal-200 cursor-pointer hover:bg-teal-50 transition-colors">
-                                    <span class="mr-2">Göğüs</span>
-                                    <span class="flex h-4 w-4 relative">
-                                        <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-teal-400 opacity-75"></span>
-                                        <span class="relative inline-flex rounded-full h-4 w-4 bg-teal-500"></span>
-                                    </span>
-                                </div>
-                                
-                                <div class="absolute bottom-1/4 right-1/3 bg-white px-3 py-1 rounded-full shadow-lg text-sm font-medium text-teal-600 flex items-center border border-teal-200 cursor-pointer hover:bg-teal-50 transition-colors">
-                                    <span class="mr-2">Karın</span>
-                                    <span class="flex h-4 w-4 relative">
-                                        <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-teal-400 opacity-75"></span>
-                                        <span class="relative inline-flex rounded-full h-4 w-4 bg-teal-500"></span>
-                                    </span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+                            <!-- 3D Model Container -->
+<div class="rounded-lg h-[430px] relative" id="human-model-container">
+    <div class="absolute top-1/4 right-1/4 z-10 bg-white px-3 py-1 rounded-full shadow-lg text-sm font-medium text-teal-600 flex items-center border border-teal-200 cursor-pointer hover:bg-teal-50 transition-colors model-tag" data-target="face">
+        <span class="mr-2">Yüz</span>
+        <span class="flex h-4 w-4 relative">
+            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-teal-400 opacity-75"></span>
+            <span class="relative inline-flex rounded-full h-4 w-4 bg-teal-500"></span>
+        </span>
+    </div>
+    
+    <div class="absolute top-1/2 left-1/4 z-10 bg-white px-3 py-1 rounded-full shadow-lg text-sm font-medium text-teal-600 flex items-center border border-teal-200 cursor-pointer hover:bg-teal-50 transition-colors model-tag" data-target="chest">
+        <span class="mr-2">Göğüs</span>
+        <span class="flex h-4 w-4 relative">
+            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-teal-400 opacity-75"></span>
+            <span class="relative inline-flex rounded-full h-4 w-4 bg-teal-500"></span>
+        </span>
+    </div>
+    
+    <div class="absolute bottom-1/4 right-1/3 z-10 bg-white px-3 py-1 rounded-full shadow-lg text-sm font-medium text-teal-600 flex items-center border border-teal-200 cursor-pointer hover:bg-teal-50 transition-colors model-tag" data-target="abdomen">
+        <span class="mr-2">Karın</span>
+        <span class="flex h-4 w-4 relative">
+            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-teal-400 opacity-75"></span>
+            <span class="relative inline-flex rounded-full h-4 w-4 bg-teal-500"></span>
+        </span>
+    </div>
+    
+    <!-- Loading mesajı -->
+    <div id="model-loading" class="absolute inset-0 flex items-center justify-center bg-gradient-to-r from-teal-100 to-blue-100">
+        <div class="text-center p-6">
+            <div class="mb-4 w-12 h-12 border-t-4 border-teal-500 border-solid rounded-full animate-spin mx-auto"></div>
+            <h3 class="text-xl font-medium text-gray-700">3D Model Yükleniyor</h3>
+            <p class="text-gray-500 mt-2">Lütfen bekleyin...</p>
         </div>
+    </div>
+</div>
         
         <!-- Wave Shape Divider -->
         <div class="absolute bottom-0 left-0 right-0">
@@ -1060,5 +1062,232 @@
             });
         });
     </script>
+                            <!-- 3D Model JavaScript -->
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // 3D Model başlatma
+        initHumanModel();
+    });
+
+    function initHumanModel() {
+        const container = document.getElementById('human-model-container');
+        const width = container.clientWidth;
+        const height = container.clientHeight;
+        
+        // Scene, camera ve renderer oluşturma
+        const scene = new THREE.Scene();
+        scene.background = new THREE.Color(0xf0f9ff); // Açık mavi arka plan
+        
+        const camera = new THREE.PerspectiveCamera(45, width / height, 0.1, 1000);
+        camera.position.set(0, 0, 5);
+        
+        const renderer = new THREE.WebGLRenderer({ antialias: true });
+        renderer.setSize(width, height);
+        renderer.setPixelRatio(window.devicePixelRatio);
+        container.appendChild(renderer.domElement);
+        
+        // Işıklandırma
+        const ambientLight = new THREE.AmbientLight(0xffffff, 0.5);
+        scene.add(ambientLight);
+        
+        const directionalLight = new THREE.DirectionalLight(0xffffff, 0.8);
+        directionalLight.position.set(1, 1, 1);
+        scene.add(directionalLight);
+        
+        // Kontroller
+        const controls = new THREE.OrbitControls(camera, renderer.domElement);
+        controls.enableDamping = true;
+        controls.dampingFactor = 0.05;
+        controls.screenSpacePanning = false;
+        controls.minDistance = 3;
+        controls.maxDistance = 8;
+        
+        // Basit insan modeli oluşturma (gerçek bir model yerine basit geometriler)
+        const humanGroup = new THREE.Group();
+        scene.add(humanGroup);
+        
+        // Gövde
+        const bodyGeometry = new THREE.CylinderGeometry(0.7, 0.5, 2, 16);
+        const bodyMaterial = new THREE.MeshPhongMaterial({ color: 0xf8d0b0 });
+        const body = new THREE.Mesh(bodyGeometry, bodyMaterial);
+        body.position.y = -0.5;
+        humanGroup.add(body);
+        
+        // Kafa
+        const headGeometry = new THREE.SphereGeometry(0.5, 32, 32);
+        const headMaterial = new THREE.MeshPhongMaterial({ color: 0xf8d0b0 });
+        const head = new THREE.Mesh(headGeometry, headMaterial);
+        head.position.y = 1.0;
+        humanGroup.add(head);
+        
+        // Bacaklar
+        const legGeometry = new THREE.CylinderGeometry(0.2, 0.2, 1.5, 16);
+        const legMaterial = new THREE.MeshPhongMaterial({ color: 0xf8d0b0 });
+        
+        const leftLeg = new THREE.Mesh(legGeometry, legMaterial);
+        leftLeg.position.set(-0.3, -2.0, 0);
+        humanGroup.add(leftLeg);
+        
+        const rightLeg = new THREE.Mesh(legGeometry, legMaterial);
+        rightLeg.position.set(0.3, -2.0, 0);
+        humanGroup.add(rightLeg);
+        
+        // Kollar
+        const armGeometry = new THREE.CylinderGeometry(0.15, 0.15, 1.2, 16);
+        const armMaterial = new THREE.MeshPhongMaterial({ color: 0xf8d0b0 });
+        
+        const leftArm = new THREE.Mesh(armGeometry, armMaterial);
+        leftArm.rotation.z = Math.PI / 3;
+        leftArm.position.set(-1.0, 0.2, 0);
+        humanGroup.add(leftArm);
+        
+        const rightArm = new THREE.Mesh(armGeometry, armMaterial);
+        rightArm.rotation.z = -Math.PI / 3;
+        rightArm.position.set(1.0, 0.2, 0);
+        humanGroup.add(rightArm);
+        
+        // İnteraktif noktalar için highlight materyalleri
+        const highlightMaterials = {
+            face: new THREE.MeshBasicMaterial({ color: 0xff9999, transparent: true, opacity: 0.7 }),
+            chest: new THREE.MeshBasicMaterial({ color: 0x99ff99, transparent: true, opacity: 0.7 }),
+            abdomen: new THREE.MeshBasicMaterial({ color: 0x9999ff, transparent: true, opacity: 0.7 })
+        };
+        
+        // İnteraktif noktalar (hotspots)
+        const hotspotGeometry = new THREE.SphereGeometry(0.2, 16, 16);
+        
+        const faceHotspot = new THREE.Mesh(hotspotGeometry, highlightMaterials.face);
+        faceHotspot.position.set(0, 1.0, 0.5);
+        faceHotspot.userData = { target: 'face' };
+        humanGroup.add(faceHotspot);
+        
+        const chestHotspot = new THREE.Mesh(hotspotGeometry, highlightMaterials.chest);
+        chestHotspot.position.set(0, 0.2, 0.7);
+        chestHotspot.userData = { target: 'chest' };
+        humanGroup.add(chestHotspot);
+        
+        const abdomenHotspot = new THREE.Mesh(hotspotGeometry, highlightMaterials.abdomen);
+        abdomenHotspot.position.set(0, -0.5, 0.7);
+        abdomenHotspot.userData = { target: 'abdomen' };
+        humanGroup.add(abdomenHotspot);
+        
+        // Tüm hotspotları bir array'e ekleyelim
+        const hotspots = [faceHotspot, chestHotspot, abdomenHotspot];
+        
+        // Raycaster ile tıklama işlemleri
+        const raycaster = new THREE.Raycaster();
+        const mouse = new THREE.Vector2();
+        
+        // Model etiketlerini ilgili hotspotlara bağlama
+        const modelTags = document.querySelectorAll('.model-tag');
+        modelTags.forEach(tag => {
+            tag.addEventListener('click', () => {
+                const target = tag.getAttribute('data-target');
+                highlightBodyPart(target);
+            });
+        });
+        
+        // Vücut bölgesini vurgulama
+        function highlightBodyPart(target) {
+            hotspots.forEach(hotspot => {
+                if (hotspot.userData.target === target) {
+                    // Vurgulanacak hotspot
+                    hotspot.material.opacity = 0.9;
+                    hotspot.scale.set(1.3, 1.3, 1.3);
+                    
+                    // Kamerayı bu noktaya doğru hareket ettir
+                    const position = hotspot.position.clone();
+                    const cameraTarget = new THREE.Vector3(
+                        position.x, 
+                        position.y, 
+                        position.z + 4
+                    );
+                    
+                    // Kamera animasyonu
+                    const startPosition = camera.position.clone();
+                    const endPosition = cameraTarget;
+                    const duration = 1000; // ms
+                    const startTime = Date.now();
+                    
+                    function animateCamera() {
+                        const now = Date.now();
+                        const timeElapsed = now - startTime;
+                        
+                        if (timeElapsed < duration) {
+                            const progress = timeElapsed / duration;
+                            camera.position.lerpVectors(startPosition, endPosition, progress);
+                            camera.lookAt(position);
+                            requestAnimationFrame(animateCamera);
+                        } else {
+                            camera.position.copy(endPosition);
+                            camera.lookAt(position);
+                        }
+                    }
+                    
+                    animateCamera();
+                } else {
+                    // Diğer hotspotlar
+                    hotspot.material.opacity = 0.3;
+                    hotspot.scale.set(1, 1, 1);
+                }
+            });
+        }
+        
+        // Mouse tıklama eventi
+        container.addEventListener('click', onMouseClick, false);
+        
+        function onMouseClick(event) {
+            // Mouse koordinatlarını normalize et
+            const rect = renderer.domElement.getBoundingClientRect();
+            mouse.x = ((event.clientX - rect.left) / rect.width) * 2 - 1;
+            mouse.y = -((event.clientY - rect.top) / rect.height) * 2 + 1;
+            
+            // Raycaster'ı güncelle
+            raycaster.setFromCamera(mouse, camera);
+            
+            // Kesişimleri kontrol et
+            const intersects = raycaster.intersectObjects(hotspots);
+            
+            if (intersects.length > 0) {
+                const target = intersects[0].object.userData.target;
+                highlightBodyPart(target);
+            }
+        }
+        
+        // Animasyon döngüsü
+        function animate() {
+            requestAnimationFrame(animate);
+            
+            // İnsan modelini yavaşça döndür
+            humanGroup.rotation.y += 0.002;
+            
+            controls.update();
+            renderer.render(scene, camera);
+        }
+        
+        // Yükleme tamamlandı, loading ekranını kaldır
+        const loadingElement = document.getElementById('model-loading');
+        if (loadingElement) {
+            loadingElement.style.opacity = 0;
+            setTimeout(() => {
+                loadingElement.style.display = 'none';
+            }, 500);
+        }
+        
+        // Pencere boyutu değiştiğinde yeniden boyutlandır
+        window.addEventListener('resize', () => {
+            const newWidth = container.clientWidth;
+            const newHeight = container.clientHeight;
+            
+            camera.aspect = newWidth / newHeight;
+            camera.updateProjectionMatrix();
+            
+            renderer.setSize(newWidth, newHeight);
+        });
+        
+        // Animasyonu başlat
+        animate();
+    }
+</script>
 </body>
 </html>
