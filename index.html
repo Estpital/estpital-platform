@@ -22,7 +22,6 @@
     
     <!-- Animasyon için -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
-    <!-- 3D Model için gerekli kütüphaneler -->
 </head>
 <body class="min-h-screen font-sans antialiased text-gray-800 bg-gray-50">
     <!-- Üst Bilgi Çubuğu -->
@@ -52,11 +51,6 @@
                     <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                         <path d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 015.45 2.525c.636-.247 1.363-.416 2.427-.465C8.901 2.013 9.256 2 11.685 2h.63z"></path>
                         <path d="M12 15a3 3 0 100-6 3 3 0 000 6z"></path>
-                    </svg>
-                </a>
-                <a href="#" class="hover:text-teal-200">
-                    <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84"></path>
                     </svg>
                 </a>
             </div>
@@ -115,8 +109,7 @@
 
     <!-- Hero Section -->
     <section class="relative bg-gradient-to-r from-teal-50 to-blue-50 overflow-hidden py-16 md:py-24">
-        <div class="absolute inset-0 bg-pattern opacity-10"></div>
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-12 pb-16 md:pt-16 md:pb-24">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="lg:grid lg:grid-cols-12 lg:gap-8 items-center">
                 <div class="lg:col-span-6 z-10 animate__animated animate__fadeInUp">
                     <div class="mb-6 inline-flex items-center rounded-full px-4 py-1 text-sm bg-teal-100 text-teal-700 font-medium">
@@ -161,21 +154,34 @@
                 </div>
                 
                 <div class="mt-12 relative lg:mt-0 lg:col-span-6 z-10 animate__animated animate__fadeInRight">
-                    <div class="bg-white rounded-xl shadow-2xl overflow-hidden transform hover:rotate-0 transition-transform duration-700 h-full">
-                        <div class="p-3 h-full">
+                    <div class="bg-white rounded-xl shadow-2xl overflow-hidden transform rotate-1 hover:rotate-0 transition-transform duration-700">
+                        <div class="p-3">
                             <!-- Basit Model Gösterimi -->
-<div class="bg-gradient-to-r from-teal-100 to-blue-100 rounded-lg h-[430px] flex items-center justify-center relative">
-    <div class="text-center p-6">
-        <div class="text-6xl mb-4">👤</div>
-        <h3 class="text-xl font-medium text-gray-700">İnteraktif İnsan Modeli</h3>
-        <p class="text-gray-500 mt-2">Vücudunuzun istediğiniz bölgesini seçerek ilgili tedavileri keşfedin</p>
-        <div class="flex flex-wrap justify-center gap-2 mt-4">
-            <button class="bg-teal-500 text-white px-3 py-1 rounded-full text-sm hover:bg-teal-600 transition-colors">Yüz</button>
-            <button class="bg-teal-500 text-white px-3 py-1 rounded-full text-sm hover:bg-teal-600 transition-colors">Göğüs</button>
-            <button class="bg-teal-500 text-white px-3 py-1 rounded-full text-sm hover:bg-teal-600 transition-colors">Karın</button>
+                            <div class="bg-gradient-to-r from-teal-100 to-blue-100 rounded-lg h-[430px] flex items-center justify-center relative">
+                                <div class="text-center p-6">
+                                    <div class="text-6xl mb-4">👤</div>
+                                    <h3 class="text-xl font-medium text-gray-700">İnteraktif İnsan Modeli</h3>
+                                    <p class="text-gray-500 mt-2">Vücudunuzun istediğiniz bölgesini seçerek ilgili tedavileri keşfedin</p>
+                                    <div class="flex flex-wrap justify-center gap-2 mt-4">
+                                        <button class="bg-teal-500 text-white px-3 py-1 rounded-full text-sm hover:bg-teal-600 transition-colors">Yüz</button>
+                                        <button class="bg-teal-500 text-white px-3 py-1 rounded-full text-sm hover:bg-teal-600 transition-colors">Göğüs</button>
+                                        <button class="bg-teal-500 text-white px-3 py-1 rounded-full text-sm hover:bg-teal-600 transition-colors">Karın</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-    </div>
-</div>
+        
+        <!-- Wave Shape Divider -->
+        <div class="absolute bottom-0 left-0 right-0">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+                <path fill="#ffffff" fill-opacity="1" d="M0,224L80,213.3C160,203,320,181,480,181.3C640,181,800,203,960,202.7C1120,203,1280,181,1360,170.7L1440,160L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z"></path>
+            </svg>
+        </div>
+    </section>
 
     <!-- Tedavi Kategorileri -->
     <section id="treatments" class="py-16 bg-white">
@@ -191,7 +197,7 @@
 
             <div class="mt-12 grid grid-cols-2 gap-6 sm:grid-cols-3 lg:grid-cols-5">
                 <!-- Kategori 1 -->
-                <a href="/kategoriler/yuz-estetigi" class="group">
+                <a href="/kategoriler/yuz-estetigi" class="group h-full">
                     <div class="flex flex-col items-center p-6 bg-gray-50 rounded-xl border border-gray-100 group-hover:border-teal-400 group-hover:shadow-xl transition-all duration-300 h-full">
                         <div class="w-16 h-16 flex items-center justify-center bg-teal-100 text-teal-600 rounded-full mb-4 group-hover:bg-teal-600 group-hover:text-white transition-colors">
                             <span class="text-2xl">😊</span>
@@ -208,7 +214,7 @@
                 </a>
                 
                 <!-- Kategori 2 -->
-                <a href="/kategoriler/vucut-estetigi" class="group">
+                <a href="/kategoriler/vucut-estetigi" class="group h-full">
                     <div class="flex flex-col items-center p-6 bg-gray-50 rounded-xl border border-gray-100 group-hover:border-teal-400 group-hover:shadow-xl transition-all duration-300 h-full">
                         <div class="w-16 h-16 flex items-center justify-center bg-teal-100 text-teal-600 rounded-full mb-4 group-hover:bg-teal-600 group-hover:text-white transition-colors">
                             <span class="text-2xl">💪</span>
@@ -225,7 +231,7 @@
                 </a>
                 
                 <!-- Kategori 3 -->
-                <a href="/kategoriler/sac-ekimi" class="group">
+                <a href="/kategoriler/sac-ekimi" class="group h-full">
                     <div class="flex flex-col items-center p-6 bg-gray-50 rounded-xl border border-gray-100 group-hover:border-teal-400 group-hover:shadow-xl transition-all duration-300 h-full">
                         <div class="w-16 h-16 flex items-center justify-center bg-teal-100 text-teal-600 rounded-full mb-4 group-hover:bg-teal-600 group-hover:text-white transition-colors">
                             <span class="text-2xl">💇</span>
@@ -242,7 +248,7 @@
                 </a>
                 
                 <!-- Kategori 4 -->
-                <a href="/kategoriler/dis-estetigi" class="group">
+                <a href="/kategoriler/dis-estetigi" class="group h-full">
                     <div class="flex flex-col items-center p-6 bg-gray-50 rounded-xl border border-gray-100 group-hover:border-teal-400 group-hover:shadow-xl transition-all duration-300 h-full">
                         <div class="w-16 h-16 flex items-center justify-center bg-teal-100 text-teal-600 rounded-full mb-4 group-hover:bg-teal-600 group-hover:text-white transition-colors">
                             <span class="text-2xl">😁</span>
@@ -259,13 +265,13 @@
                 </a>
                 
                 <!-- Kategori 5 -->
-                <a href="/kategoriler/cilt-bakimi" class="group">
+                <a href="/kategoriler/cilt-bakimi" class="group h-full">
                     <div class="flex flex-col items-center p-6 bg-gray-50 rounded-xl border border-gray-100 group-hover:border-teal-400 group-hover:shadow-xl transition-all duration-300 h-full">
                         <div class="w-16 h-16 flex items-center justify-center bg-teal-100 text-teal-600 rounded-full mb-4 group-hover:bg-teal-600 group-hover:text-white transition-colors">
                             <span class="text-2xl">✨</span>
                         </div>
                         <h3 class="text-lg font-medium text-gray-900 group-hover:text-teal-600 transition-colors">Cilt Bakımı</h3>
-                        <p class="mt-2 text-sm text-gray-500 text-center">Botox, dolgu, lazer ve diğer cilt gençleştirme
+                        <p class="mt-2 text-sm text-gray-500 text-center">Botox, dolgu, lazer ve diğer cilt gençleştirme işlemleri</p>
                         <span class="mt-4 inline-flex items-center text-sm font-medium text-teal-600">
                             Detayları Gör
                             <svg class="ml-1 w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -277,737 +283,6 @@
             </div>
         </div>
     </section>
-
-    <!-- Popüler Operasyonlar -->
-    <section class="py-16 bg-gray-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex flex-col md:flex-row md:items-end md:justify-between mb-12">
-                <div class="text-center md:text-left">
-                    <h2 class="text-3xl font-extrabold text-gray-900 sm:text-4xl">
-                        Popüler Operasyonlar
-                    </h2>
-                    <p class="mt-3 max-w-2xl text-xl text-gray-500">
-                        En çok tercih edilen estetik operasyonları keşfedin
-                    </p>
-                </div>
-                <a href="/operasyonlar" class="mt-4 md:mt-0 text-teal-600 font-medium flex items-center justify-center md:justify-start hover:text-teal-700">
-                    Tüm Operasyonları Gör
-                    <svg class="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
-                    </svg>
-                </a>
-            </div>
-
-            <div class="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
-                <!-- Operasyon 1 -->
-                <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow group">
-                    <div class="h-48 w-full relative overflow-hidden">
-                        <div class="absolute inset-0 bg-gradient-to-b from-transparent to-black opacity-60"></div>
-                        <img src="https://via.placeholder.com/600x400/0d9488/FFFFFF?text=Burun+Estetigi" alt="Burun Estetiği" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                        <div class="absolute bottom-4 left-4 text-white">
-                            <h3 class="text-xl font-bold">Burun Estetiği</h3>
-                            <p class="text-sm opacity-90">48 Uzman Doktor</p>
-                        </div>
-                    </div>
-                    <div class="p-5">
-                        <div class="flex justify-between items-center mb-3">
-                            <div class="flex items-center">
-                                <svg class="text-yellow-400 w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
-                                </svg>
-                                <span class="ml-1 text-sm text-gray-600">4.8 (152 değerlendirme)</span>
-                            </div>
-                            <span class="text-sm text-gray-500">Başlangıç:</span>
-                        </div>
-                        <div class="flex justify-between items-center">
-                            <p class="text-sm text-gray-600">İyileşme: 1-2 hafta</p>
-                            <span class="font-bold text-lg text-teal-600">₺25.000</span>
-                        </div>
-                        <a href="/operasyonlar/burun-estetigi" class="mt-4 w-full py-2 flex justify-center items-center bg-gray-100 text-teal-600 rounded-lg text-sm font-medium hover:bg-teal-50 transition-colors">
-                            Detayları Gör
-                            <svg class="ml-1 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
-                            </svg>
-                        </a>
-                    </div>
-                </div>
-                
-                <!-- Operasyon 2 -->
-                <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow group">
-                    <div class="h-48 w-full relative overflow-hidden">
-                        <div class="absolute inset-0 bg-gradient-to-b from-transparent to-black opacity-60"></div>
-                        <img src="https://via.placeholder.com/600x400/0d9488/FFFFFF?text=Meme+Buyutme" alt="Meme Büyütme" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                        <div class="absolute bottom-4 left-4 text-white">
-                            <h3 class="text-xl font-bold">Meme Büyütme</h3>
-                            <p class="text-sm opacity-90">36 Uzman Doktor</p>
-                        </div>
-                    </div>
-                    <div class="p-5">
-                        <div class="flex justify-between items-center mb-3">
-                            <div class="flex items-center">
-                                <svg class="text-yellow-400 w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
-                                </svg>
-                                <span class="ml-1 text-sm text-gray-600">4.7 (118 değerlendirme)</span>
-                            </div>
-                            <span class="text-sm text-gray-500">Başlangıç:</span>
-                        </div>
-                        <div class="flex justify-between items-center">
-                            <p class="text-sm text-gray-600">İyileşme: 2-3 hafta</p>
-                            <span class="font-bold text-lg text-teal-600">₺35.000</span>
-                        </div>
-                        <a href="/operasyonlar/meme-buyutme" class="mt-4 w-full py-2 flex justify-center items-center bg-gray-100 text-teal-600 rounded-lg text-sm font-medium hover:bg-teal-50 transition-colors">
-                            Detayları Gör
-                            <svg class="ml-1 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
-                            </svg>
-                        </a>
-                    </div>
-                </div>
-                
-                <!-- Operasyon 3 -->
-                <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow group">
-                    <div class="h-48 w-full relative overflow-hidden">
-                        <div class="absolute inset-0 bg-gradient-to-b from-transparent to-black opacity-60"></div>
-                        <img src="https://via.placeholder.com/600x400/0d9488/FFFFFF?text=Sac+Ekimi" alt="Saç Ekimi" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                        <div class="absolute bottom-4 left-4 text-white">
-                            <h3 class="text-xl font-bold">Saç Ekimi</h3>
-                            <p class="text-sm opacity-90">52 Uzman Doktor</p>
-                        </div>
-                    </div>
-                    <div class="p-5">
-                        <div class="flex justify-between items-center mb-3">
-                            <div class="flex items-center">
-                                <svg class="text-yellow-400 w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
-                                </svg>
-                                <span class="ml-1 text-sm text-gray-600">4.9 (207 değerlendirme)</span>
-                            </div>
-                            <span class="text-sm text-gray-500">Başlangıç:</span>
-                        </div>
-                        <div class="flex justify-between items-center">
-                            <p class="text-sm text-gray-600">İyileşme: 1-2 hafta</p>
-                            <span class="font-bold text-lg text-teal-600">₺22.000</span>
-                        </div>
-                        <a href="/operasyonlar/sac-ekimi" class="mt-4 w-full py-2 flex justify-center items-center bg-gray-100 text-teal-600 rounded-lg text-sm font-medium hover:bg-teal-50 transition-colors">
-                            Detayları Gör
-                            <svg class="ml-1 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
-                            </svg>
-                        </a>
-                    </div>
-                </div>
-                
-                <!-- Operasyon 4 -->
-                <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow group">
-                    <div class="h-48 w-full relative overflow-hidden">
-                        <div class="absolute inset-0 bg-gradient-to-b from-transparent to-black opacity-60"></div>
-                        <img src="https://via.placeholder.com/600x400/0d9488/FFFFFF?text=Liposuction" alt="Liposuction" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                        <div class="absolute bottom-4 left-4 text-white">
-                            <h3 class="text-xl font-bold">Liposuction</h3>
-                            <p class="text-sm opacity-90">41 Uzman Doktor</p>
-                        </div>
-                    </div>
-                    <div class="p-5">
-                        <div class="flex justify-between items-center mb-3">
-                            <div class="flex items-center">
-                                <svg class="text-yellow-400 w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
-                                </svg>
-                                <span class="ml-1 text-sm text-gray-600">4.6 (135 değerlendirme)</span>
-                            </div>
-                            <span class="text-sm text-gray-500">Başlangıç:</span>
-                        </div>
-                        <div class="flex justify-between items-center">
-                            <p class="text-sm text-gray-600">İyileşme: 2-4 hafta</p>
-                            <span class="font-bold text-lg text-teal-600">₺30.000</span>
-                        </div>
-                        <a href="/operasyonlar/liposuction" class="mt-4 w-full py-2 flex justify-center items-center bg-gray-100 text-teal-600 rounded-lg text-sm font-medium hover:bg-teal-50 transition-colors">
-                            Detayları Gör
-                            <svg class="ml-1 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
-                            </svg>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Doktor Arama Bölümü -->
-    <section class="py-16 bg-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="lg:grid lg:grid-cols-12 lg:gap-8 items-center">
-                <div class="lg:col-span-6">
-                    <h2 class="text-3xl font-extrabold text-gray-900 sm:text-4xl">
-                        Size En Uygun Doktoru Bulun
-                    </h2>
-                    <p class="mt-4 text-lg text-gray-500">
-                        400'den fazla uzman doktor arasından ilgilendiğiniz operasyon, konum ve diğer kriterlere göre arama yaparak size en uygun doktoru bulun.
-                    </p>
-                    
-                    <div class="mt-8 bg-gray-50 p-6 rounded-xl shadow-md">
-                        <form class="space-y-4">
-                            <div>
-                                <label for="procedure" class="block text-sm font-medium text-gray-700">Operasyon</label>
-                                <select id="procedure" name="procedure" class="mt-1 block w-full pl-3 pr-10 py-2 text-base border-gray-300 focus:outline-none focus:ring-teal-500 focus:border-teal-500 sm:text-sm rounded-md">
-                                    <option value="">Operasyon Seçin</option>
-                                    <option>Burun Estetiği</option>
-                                    <option>Meme Büyütme</option>
-                                    <option>Saç Ekimi</option>
-                                    <option>Liposuction</option>
-                                    <option>Yüz Germe</option>
-                                </select>
-                            </div>
-                            <div>
-                                <label for="location" class="block text-sm font-medium text-gray-700">Şehir</label>
-                                <select id="location" name="location" class="mt-1 block w-full pl-3 pr-10 py-2 text-base border-gray-300 focus:outline-none focus:ring-teal-500 focus:border-teal-500 sm:text-sm rounded-md">
-                                    <option value="">Şehir Seçin</option>
-                                    <option>İstanbul</option>
-                                    <option>Ankara</option>
-                                    <option>İzmir</option>
-                                    <option>Antalya</option>
-                                    <option>Bursa</option>
-                                </select>
-                            </div>
-                            <div class="flex items-center">
-                                <input id="online-consultation" name="online-consultation" type="checkbox" class="h-4 w-4 text-teal-600 focus:ring-teal-500 border-gray-300 rounded">
-                                <label for="online-consultation" class="ml-2 block text-sm text-gray-700">
-                                    Online konsültasyon imkanı olan doktorlar
-                                </label>
-                            </div>
-                            <button type="submit" class="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-teal-600 hover:bg-teal-700 focus:outline-none">
-                                Doktor Ara
-                            </button>
-                        </form>
-                    </div>
-                </div>
-                
-                <div class="mt-10 lg:mt-0 lg:col-span-6 relative">
-                    <img src="https://via.placeholder.com/800x600/0d9488/FFFFFF?text=Doktor+Ekibi" alt="Doktor Ekibi" class="rounded-xl shadow-lg">
-                    
-                    <!-- Feature badges -->
-                    <div class="absolute -bottom-6 -left-6 bg-white px-6 py-4 rounded-lg shadow-lg border border-gray-100">
-                        <div class="flex items-center space-x-3">
-                            <div class="flex-shrink-0">
-                                <svg class="h-10 w-10 text-teal-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
-                                </svg>
-                            </div>
-                            <div>
-                                <h3 class="text-lg font-medium text-gray-900">Sertifikalı Uzman Doktorlar</h3>
-                                <p class="text-sm text-gray-500">Sadece alanında yetkin, eğitimli ve denetlenmiş uzmanlar</p>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="absolute -top-6 -right-6 bg-white px-6 py-4 rounded-lg shadow-lg border border-gray-100">
-                        <div class="flex items-center space-x-3">
-                            <div class="flex-shrink-0">
-                                <svg class="h-10 w-10 text-teal-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
-                                </svg>
-                            </div>
-                            <div>
-                                <h3 class="text-lg font-medium text-gray-900">Online Randevu</h3>
-                                <p class="text-sm text-gray-500">7/24 online randevu planlama ve konsültasyon</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Ücretsiz Konsültasyon Formu -->
-    <section id="virtual-consultation" class="py-16 bg-gradient-to-br from-teal-600 to-teal-800 text-white relative overflow-hidden">
-        <div class="absolute top-0 left-0 w-full h-full opacity-10">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="0.5">
-                <path d="M0 4 L32 4 L16 28 Z" />
-            </svg>
-        </div>
-        
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <div class="lg:grid lg:grid-cols-12 lg:gap-8">
-                <div class="lg:col-span-5">
-                    <h2 class="text-3xl font-extrabold sm:text-4xl">
-                        Ücretsiz Konsültasyon Alın
-                    </h2>
-                    <p class="mt-4 text-lg text-teal-100">
-                        Uzman doktorlarımız sizinle iletişime geçerek ihtiyaçlarınızı değerlendirecek ve size özel 
-                        en iyi tedavi planını sunacaklar.
-                    </p>
-                    
-                    <div class="mt-8 space-y-6">
-                        <div class="flex">
-                            <div class="flex-shrink-0">
-                                <div class="flex items-center justify-center h-12 w-12 rounded-md bg-white text-teal-600">
-                                    <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
-                                    </svg>
-                                </div>
-                            </div>
-                            <div class="ml-4">
-                                <h3 class="text-lg font-medium">Uzman Doktor Değerlendirmesi</h3>
-                                <p class="mt-2 text-teal-100">İhtiyaçlarınıza ve beklentilerinize uygun uzman doktorlarımız tarafından değerlendirme.</p>
-                            </div>
-                        </div>
-                        
-                        <div class="flex">
-                            <div class="flex-shrink-0">
-                                <div class="flex items-center justify-center h-12 w-12 rounded-md bg-white text-teal-600">
-                                    <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 5v2m0 4v2m0 4v2M5 5a2 2 0 00-2 2v3a2 2 0 110 4v3a2 2 0 002 2h14a2 2 0 002-2v-3a2 2 0 110-4V7a2 2 0 00-2-2H5z"></path>
-                                    </svg>
-                                </div>
-                            </div>
-                            <div class="ml-4">
-                                <h3 class="text-lg font-medium">Fiyat Bilgisi ve Tedavi Planı</h3>
-                                <p class="mt-2 text-teal-100">Size özel detaylı fiyat bilgisi ve tedavi planı sunumu.</p>
-                            </div>
-                        </div>
-                        
-                        <div class="flex">
-                            <div class="flex-shrink-0">
-                                <div class="flex items-center justify-center h-12 w-12 rounded-md bg-white text-teal-600">
-                                    <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2v4l-4-4H9a1.994 1.994 0 01-1.414-.586m0 0L11 14h4a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2v4l.586-.586z"></path>
-                                    </svg>
-                                </div>
-                            </div>
-                            <div class="ml-4">
-                                <h3 class="text-lg font-medium">7/24 Danışman Desteği</h3>
-                                <p class="mt-2 text-teal-100">Süreç boyunca her an ulaşabileceğiniz kişisel danışmanınız.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="mt-12 lg:mt-0 lg:col-span-7">
-                    <div class="bg-white rounded-xl shadow-xl overflow-hidden">
-                        <div class="px-6 py-8">
-                            <h3 class="text-xl font-bold text-gray-900 text-center">Ücretsiz Konsültasyon Formu</h3>
-                            <p class="mt-1 text-sm text-gray-500 text-center">Formu doldurun, uzmanlarımız 24 saat içinde size ulaşsın</p>
-                            
-                            <form class="mt-6 grid grid-cols-1 gap-y-6 sm:grid-cols-2 sm:gap-x-4">
-                                <div>
-                                    <label for="first-name" class="block text-sm font-medium text-gray-700">Ad Soyad</label>
-                                    <div class="mt-1">
-                                        <input type="text" name="first-name" id="first-name" class="block w-full border-gray-300 rounded-md shadow-sm focus:ring-teal-500 focus:border-teal-500 sm:text-sm">
-                                    </div>
-                                </div>
-
-                                <div>
-                                    <label for="email" class="block text-sm font-medium text-gray-700">E-posta</label>
-                                    <div class="mt-1">
-                                        <input type="email" name="email" id="email" class="block w-full border-gray-300 rounded-md shadow-sm focus:ring-teal-500 focus:border-teal-500 sm:text-sm">
-                                    </div>
-                                </div>
-
-                                <div>
-                                    <label for="phone" class="block text-sm font-medium text-gray-700">Telefon</label>
-                                    <div class="mt-1">
-                                        <input type="tel" name="phone" id="phone" class="block w-full border-gray-300 rounded-md shadow-sm focus:ring-teal-500 focus:border-teal-500 sm:text-sm">
-                                    </div>
-                                </div>
-
-                                <div>
-                                    <label for="city" class="block text-sm font-medium text-gray-700">Şehir</label>
-                                    <div class="mt-1">
-                                        <select id="city" name="city" class="block w-full border-gray-300 rounded-md shadow-sm focus:ring-teal-500 focus:border-teal-500 sm:text-sm">
-                                            <option value="">Şehir Seçin</option>
-                                            <option>İstanbul</option>
-                                            <option>Ankara</option>
-                                            <option>İzmir</option>
-                                            <option>Antalya</option>
-                                            <option>Diğer</option>
-                                        </select>
-                                    </div>
-                                </div>
-
-                                <div class="sm:col-span-2">
-                                    <label for="procedure-type" class="block text-sm font-medium text-gray-700">İlgilendiğiniz İşlem</label>
-                                    <div class="mt-1">
-                                        <select id="procedure-type" name="procedure-type" class="block w-full border-gray-300 rounded-md shadow-sm focus:ring-teal-500 focus:border-teal-500 sm:text-sm">
-                                            <option value="">İşlem Seçin</option>
-                                            <option>Burun Estetiği</option>
-                                            <option>Meme Büyütme</option>
-                                            <option>Saç Ekimi</option>
-                                            <option>Liposuction</option>
-                                            <option>Yüz Germe</option>
-                                            <option>Göz Kapağı Estetiği</option>
-                                            <option>Karın Germe</option>
-                                            <option>Diş Estetiği</option>
-                                            <option>Diğer</option>
-                                        </select>
-                                    </div>
-                                </div>
-
-                                <div class="sm:col-span-2">
-                                    <label for="message" class="block text-sm font-medium text-gray-700">Mesajınız (Opsiyonel)</label>
-                                    <div class="mt-1">
-                                        <textarea id="message" name="message" rows="4" class="block w-full border-gray-300 rounded-md shadow-sm focus:ring-teal-500 focus:border-teal-500 sm:text-sm"></textarea>
-                                    </div>
-                                </div>
-
-                                <div class="sm:col-span-2">
-                                    <div class="flex items-start">
-                                        <div class="flex-shrink-0">
-                                            <input id="comments" name="comments" type="checkbox" class="h-4 w-4 text-teal-600 focus:ring-teal-500 border-gray-300 rounded">
-                                        </div>
-                                        <div class="ml-3">
-                                            <p class="text-sm text-gray-500">Kişisel verilerimin işlenmesine izin veriyorum ve <a href="#" class="font-medium text-teal-600 hover:text-teal-500">Gizlilik Politikası</a>'nı okudum ve kabul ediyorum.</p>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="sm:col-span-2">
-                                    <button type="submit" class="w-full inline-flex items-center justify-center px-6 py-3 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-teal-600 hover:bg-teal-700 focus:outline-none">
-                                        Gönder
-                                    </button>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Neden Biz? -->
-    <section class="py-16 bg-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center">
-                <h2 class="text-3xl font-extrabold text-gray-900 sm:text-4xl">
-                    Neden Estpital?
-                </h2>
-                <p class="mt-4 max-w-2xl mx-auto text-xl text-gray-500">
-                    Estetik operasyonlar için Türkiye'nin en kapsamlı ve güvenilir platformu
-                </p>
-            </div>
-
-            <div class="mt-16">
-                <div class="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
-                    <div class="flex flex-col items-center text-center bg-gray-50 rounded-lg p-6 hover:shadow-lg transition-shadow">
-                        <div class="flex items-center justify-center h-16 w-16 rounded-md bg-teal-500 text-white mb-5">
-                            <svg class="h-8 w-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"></path>
-                            </svg>
-                        </div>
-                        <h3 class="text-xl font-medium text-gray-900 mb-3">Kapsamlı Platfom</h3>
-                        <p class="text-gray-500">Tüm estetik operasyonlar, doktorlar, hastaneler ve fiyatlar tek platformda.</p>
-                    </div>
-
-                    <div class="flex flex-col items-center text-center bg-gray-50 rounded-lg p-6 hover:shadow-lg transition-shadow">
-                        <div class="flex items-center justify-center h-16 w-16 rounded-md bg-teal-500 text-white mb-5">
-                            <svg class="h-8 w-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
-                            </svg>
-                        </div>
-                        <h3 class="text-xl font-medium text-gray-900 mb-3">Denetlenmiş Doktorlar</h3>
-                        <p class="text-gray-500">Tüm doktorlarımız titizlikle seçilmiş ve denetlenmiş uzman hekimlerdir.</p>
-                    </div>
-
-                    <div class="flex flex-col items-center text-center bg-gray-50 rounded-lg p-6 hover:shadow-lg transition-shadow">
-                        <div class="flex items-center justify-center h-16 w-16 rounded-md bg-teal-500 text-white mb-5">
-                            <svg class="h-8 w-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                            </svg>
-                        </div>
-                        <h3 class="text-xl font-medium text-gray-900 mb-3">Şeffaf Fiyatlandırma</h3>
-                        <p class="text-gray-500">Tüm operasyonlar için gerçek ve güncel fiyat bilgileri sunuyoruz.</p>
-                    </div>
-
-                    <div class="flex flex-col items-center text-center bg-gray-50 rounded-lg p-6 hover:shadow-lg transition-shadow">
-                        <div class="flex items-center justify-center h-16 w-16 rounded-md bg-teal-500 text-white mb-5">
-                            <svg class="h-8 w-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"></path>
-                            </svg>
-                        </div>
-                        <h3 class="text-xl font-medium text-gray-900 mb-3">Tarafsız Değerlendirmeler</h3>
-                        <p class="text-gray-500">Gerçek hastalardan gelen doğrulanmış yorumlar ve değerlendirmeler.</p>
-                    </div>
-
-                    <div class="flex flex-col items-center text-center bg-gray-50 rounded-lg p-6 hover:shadow-lg transition-shadow">
-                        <div class="flex items-center justify-center h-16 w-16 rounded-md bg-teal-500 text-white mb-5">
-                            <svg class="h-8 w-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2v4l-4-4H9a1.994 1.994 0 01-1.414-.586m0 0L11 14h4a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2v4l.586-.586z"></path>
-                            </svg>
-                        </div>
-                        <h3 class="text-xl font-medium text-gray-900 mb-3">Kişisel Danışmanlık</h3>
-                        <p class="text-gray-500">Tüm süreç boyunca size yardımcı olacak kişisel bir danışman.</p>
-                    </div>
-
-                    <div class="flex flex-col items-center text-center bg-gray-50 rounded-lg p-6 hover:shadow-lg transition-shadow">
-                        <div class="flex items-center justify-center h-16 w-16 rounded-md bg-teal-500 text-white mb-5">
-                            <svg class="h-8 w-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
-                            </svg>
-                        </div>
-                        <h3 class="text-xl font-medium text-gray-900 mb-3">Hızlı ve Kolay Süreç</h3>
-                        <p class="text-gray-500">Basit ve hızlı bir şekilde doktorunuzu bulun ve randevunuzu alın.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Testimonial -->
-    <section class="py-16 bg-gray-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center">
-                <h2 class="text-3xl font-extrabold text-gray-900 sm:text-4xl">
-                    Hasta Deneyimleri
-                </h2>
-                <p class="mt-4 max-w-2xl mx-auto text-xl text-gray-500">
-                    Platformumuz aracılığıyla tedavi olan hastaların gerçek deneyimleri
-                </p>
-            </div>
-
-            <div class="mt-16 bg-white rounded-2xl shadow-xl overflow-hidden">
-                <div class="lg:grid lg:grid-cols-12">
-                    <div class="lg:col-span-5">
-                        <div class="h-full w-full object-cover lg:h-full lg:w-full bg-gradient-to-br from-teal-400 to-teal-600 flex items-center justify-center">
-                            <img class="h-64 w-64 rounded-full object-cover border-4 border-white" src="https://via.placeholder.com/400x400/ffffff/666666?text=Hasta" alt="Hasta">
-                        </div>
-                    </div>
-                    <div class="py-12 px-6 sm:p-12 lg:col-span-7">
-                        <div class="h-full flex flex-col justify-center">
-                            <svg class="h-12 w-12 text-teal-400 opacity-25" fill="currentColor" viewBox="0 0 32 32" aria-hidden="true">
-                                <path d="M9.352 4C4.456 7.456 1 13.12 1 19.36c0 5.088 3.072 8.064 6.624 8.064 3.36 0 5.856-2.688 5.856-5.856 0-3.168-2.208-5.472-5.088-5.472-.576 0-1.344.096-1.536.192.48-3.264 3.552-7.104 6.624-9.024L9.352 4zm16.512 0c-4.8 3.456-8.256 9.12-8.256 15.36 0 5.088 3.072 8.064 6.624 8.064 3.264 0 5.856-2.688 5.856-5.856 0-3.168-2.304-5.472-5.184-5.472-.576 0-1.248.096-1.44.192.48-3.264 3.456-7.104 6.528-9.024L25.864 4z" />
-                            </svg>
-                            <p class="mt-8 text-xl text-gray-500 leading-8">
-                                Estpital sayesinde alanında uzman bir doktor buldum ve rinoplasti operasyonumu gerçekleştirdim. Süreç boyunca hem platform hem de doktorum tarafından sürekli bilgilendirildim. Sonuçtan çok memnunum ve platformu herkese tavsiye ediyorum.
-                            </p>
-                            <div class="mt-8">
-                                <div class="flex items-center">
-                                    <div class="flex-shrink-0">
-                                        <div class="flex">
-                                            <svg class="text-yellow-400 h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                                            </svg>
-                                            <svg class="text-yellow-400 h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                                            </svg>
-                                            <svg class="text-yellow-400 h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                                            </svg>
-                                            <svg class="text-yellow-400 h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                                            </svg>
-                                            <svg class="text-yellow-400 h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                                            </svg>
-                                        </div>
-                                    </div>
-                                    <p class="ml-3 text-sm text-gray-500">
-                                        5.0 yıldız
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="mt-4">
-                                <h4 class="text-xl font-bold text-gray-900">Ayşe Yılmaz</h4>
-                                <p class="text-base text-gray-500">Rinoplasti (Burun Estetiği) - İstanbul</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Newsletter -->
-    <section class="py-16 bg-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="rounded-2xl bg-teal-600 px-6 py-10 sm:p-12">
-                <div class="lg:grid lg:grid-cols-2 lg:gap-8 items-center">
-                    <div>
-                        <h2 class="text-2xl font-extrabold text-white sm:text-3xl">
-                            Bültenimize Abone Olun
-                        </h2>
-                        <p class="mt-4 text-lg text-teal-100 max-w-3xl">
-                            Estetik operasyonlar, yeni tedavi yöntemleri, özel fırsatlar ve daha fazlası hakkında bilgi almak için bültenimize abone olun.
-                        </p>
-                    </div>
-                    <div class="mt-8 lg:mt-0">
-                        <form class="sm:flex">
-                            <label for="email-address" class="sr-only">E-posta adresi</label>
-                            <input id="email-address" name="email" type="email" autocomplete="email" required class="w-full px-5 py-3 border-white focus:ring-white focus:border-white rounded-md" placeholder="E-posta adresiniz">
-                            <button type="submit" class="mt-3 w-full flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-teal-600 bg-white hover:bg-teal-50 focus:outline-none sm:mt-0 sm:ml-3 sm:w-auto sm:flex-shrink-0">
-                                Abone Ol
-                            </button>
-                        </form>
-                        <p class="mt-3 text-sm text-teal-100">
-                            Bilgilerinizi asla paylaşmayacağız. Gizlilik Politikamızı okumak için <a href="#" class="font-medium underline">tıklayın</a>.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="bg-gray-900" aria-labelledby="footer-heading">
-        <h2 id="footer-heading" class="sr-only">Footer</h2>
-        <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:py-16 lg:px-8">
-            <div class="grid grid-cols-2 gap-8 md:grid-cols-4">
-                <div>
-                    <h3 class="text-sm font-semibold text-gray-400 tracking-wider uppercase">
-                        Hakkımızda
-                    </h3>
-                    <ul class="mt-4 space-y-4">
-                        <li>
-                            <a href="#" class="text-base text-gray-300 hover:text-white">
-                                Şirketimiz
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#" class="text-base text-gray-300 hover:text-white">
-                                Ekibimiz
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#" class="text-base text-gray-300 hover:text-white">
-                                Basında Biz
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#" class="text-base text-gray-300 hover:text-white">
-                                Kariyer
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-                <div>
-                    <h3 class="text-sm font-semibold text-gray-400 tracking-wider uppercase">
-                        Operasyonlar
-                    </h3>
-                    <ul class="mt-4 space-y-4">
-                        <li>
-                            <a href="#" class="text-base text-gray-300 hover:text-white">
-                                Yüz Estetiği
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#" class="text-base text-gray-300 hover:text-white">
-                                Vücut Estetiği
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#" class="text-base text-gray-300 hover:text-white">
-                                Saç Ekimi
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#" class="text-base text-gray-300 hover:text-white">
-                                Diş Estetiği
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#" class="text-base text-gray-300 hover:text-white">
-                                Cilt Bakımı
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-                <div>
-                    <h3 class="text-sm font-semibold text-gray-400 tracking-wider uppercase">
-                        Doktorlar
-                    </h3>
-                    <ul class="mt-4 space-y-4">
-                        <li>
-                            <a href="#" class="text-base text-gray-300 hover:text-white">
-                                Doktor Ol
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#" class="text-base text-gray-300 hover:text-white">
-                                Plastik Cerrahlar
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#" class="text-base text-gray-300 hover:text-white">
-                                Saç Ekimi Uzmanları
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#" class="text-base text-gray-300 hover:text-white">
-                                Diş Hekimleri
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#" class="text-base text-gray-300 hover:text-white">
-                                Dermatoloji Uzmanları
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-                <div>
-                    <h3 class="text-sm font-semibold text-gray-400 tracking-wider uppercase">
-                        İletişim
-                    </h3>
-                    <ul class="mt-4 space-y-4">
-                        <li>
-                            <a href="#" class="text-base text-gray-300 hover:text-white">
-                                Bize Ulaşın
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#" class="text-base text-gray-300 hover:text-white">
-                                SSS
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#" class="text-base text-gray-300 hover:text-white">
-                                Gizlilik Politikası
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#" class="text-base text-gray-300 hover:text-white">
-                                Kullanım Şartları
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            <div class="mt-12 border-t border-gray-700 pt-8">
-                <div class="flex justify-between items-center">
-                    <div class="flex space-x-6">
-                        <a href="#" class="text-gray-400 hover:text-gray-300">
-                            <span class="sr-only">Facebook</span>
-                            <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                                <path fill-rule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" clip-rule="evenodd" />
-                            </svg>
-                        </a>
-        
-                        <a href="#" class="text-gray-400 hover:text-gray-300">
-                            <span class="sr-only">Instagram</span>
-                            <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                                <path fill-rule="evenodd" d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 015.45 2.525c.636-.247 1.363-.416 2.427-.465C8.901 2.013 9.256 2 11.685 2h.63zm-.081 1.802h-.468c-2.456 0-2.784.011-3.807.058-.975.045-1.504.207-1.857.344-.467.182-.8.398-1.15.748-.35.35-.566.683-.748 1.15-.137.353-.3.882-.344 1.857-.047 1.023-.058 1.351-.058 3.807v.468c0 2.456.011 2.784.058 3.807.045.975.207 1.504.344 1.857.182.466.399.8.748 1.15.35.35.683.566 1.15.748.353.137.882.3 1.857.344 1.054.048 1.37.058 4.041.058h.08c2.597 0 2.917-.01 3.96-.058.976-.045 1.505-.207 1.858-.344.466-.182.8-.398 1.15-.748.35-.35.566-.683.748-1.15.137-.353.3-.882.344-1.857.048-1.055.058-1.37.058-4.041v-.08c0-2.597-.01-2.917-.058-3.96-.045-.976-.207-1.505-.344-1.858a3.097 3.097 0 00-.748-1.15 3.098 3.098 0 00-1.15-.748c-.353-.137-.882-.3-1.857-.344-1.023-.047-1.351-.058-3.807-.058zM12 6.865a5.135 5.135 0 110 10.27 5.135 5.135 0 010-10.27zm0 1.802a3.333 3.333 0 100 6.666 3.333 3.333 0 000-6.666zm5.338-3.205a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z" clip-rule="evenodd" />
-                            </svg>
-                        </a>
-        
-                        <a href="#" class="text-gray-400 hover:text-gray-300">
-                            <span class="sr-only">Twitter</span>
-                            <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                                <path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84" />
-                            </svg>
-                        </a>
-        
-                        <a href="#" class="text-gray-400 hover:text-gray-300">
-                            <span class="sr-only">YouTube</span>
-                            <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                                <path fill-rule="evenodd" d="M19.812 5.418c.861.23 1.538.907 1.768 1.768C21.998 8.746 22 12 22 12s0 3.255-.418 4.814a2.504 2.504 0 0 1-1.768 1.768c-1.56.419-7.814.419-7.814.419s-6.255 0-7.814-.419a2.505 2.505 0 0 1-1.768-1.768C2 15.255 2 12 2 12s0-3.255.417-4.814a2.507 2.507 0 0 1 1.768-1.768C5.744 5 11.998 5 11.998 5s6.255 0 7.814.418ZM15.194 12 10 15V9l5.194 3Z" clip-rule="evenodd" />
-                            </svg>
-                        </a>
-                    </div>
-                    <p class="text-base text-gray-400">
-                        &copy; 2025 Estpital, Tüm hakları saklıdır.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </footer>
 
     <!-- JavaScript -->
     <script>
@@ -1029,271 +304,5 @@
             });
         });
     </script>
-                            <!-- 3D Model JavaScript -->
-<script>
-    document.addEventListener('DOMContentLoaded', function() {
-        // 3D Model başlatma
-        initHumanModel();
-    });
-
-    function initHumanModel() {
-        const container = document.getElementById('human-model-container');
-        const width = container.clientWidth;
-        const height = container.clientHeight;
-        
-        // Scene, camera ve renderer oluşturma
-        const scene = new THREE.Scene();
-        scene.background = new THREE.Color(0xf0f9ff); // Açık mavi arka plan
-        
-        const camera = new THREE.PerspectiveCamera(45, width / height, 0.1, 1000);
-        camera.position.set(0, 0, 5);
-        
-        const renderer = new THREE.WebGLRenderer({ antialias: true });
-        renderer.setSize(width, height);
-        renderer.setPixelRatio(window.devicePixelRatio);
-        container.appendChild(renderer.domElement);
-        
-        // Işıklandırma
-        const ambientLight = new THREE.AmbientLight(0xffffff, 0.5);
-        scene.add(ambientLight);
-        
-        const directionalLight = new THREE.DirectionalLight(0xffffff, 0.8);
-        directionalLight.position.set(1, 1, 1);
-        scene.add(directionalLight);
-        
-        // Kontroller
-        const controls = new THREE.OrbitControls(camera, renderer.domElement);
-        controls.enableDamping = true;
-        controls.dampingFactor = 0.05;
-        controls.screenSpacePanning = false;
-        controls.minDistance = 3;
-        controls.maxDistance = 8;
-        
-        // Basit insan modeli oluşturma (gerçek bir model yerine basit geometriler)
-        const humanGroup = new THREE.Group();
-        scene.add(humanGroup);
-        
-        // Gövde
-        const bodyGeometry = new THREE.CylinderGeometry(0.7, 0.5, 2, 16);
-        const bodyMaterial = new THREE.MeshPhongMaterial({ color: 0xf8d0b0 });
-        const body = new THREE.Mesh(bodyGeometry, bodyMaterial);
-        body.position.y = -0.5;
-        humanGroup.add(body);
-        
-        // Kafa
-        const headGeometry = new THREE.SphereGeometry(0.5, 32, 32);
-        const headMaterial = new THREE.MeshPhongMaterial({ color: 0xf8d0b0 });
-        const head = new THREE.Mesh(headGeometry, headMaterial);
-        head.position.y = 1.0;
-        humanGroup.add(head);
-        
-        // Bacaklar
-        const legGeometry = new THREE.CylinderGeometry(0.2, 0.2, 1.5, 16);
-        const legMaterial = new THREE.MeshPhongMaterial({ color: 0xf8d0b0 });
-        
-        const leftLeg = new THREE.Mesh(legGeometry, legMaterial);
-        leftLeg.position.set(-0.3, -2.0, 0);
-        humanGroup.add(leftLeg);
-        
-        const rightLeg = new THREE.Mesh(legGeometry, legMaterial);
-        rightLeg.position.set(0.3, -2.0, 0);
-        humanGroup.add(rightLeg);
-        
-        // Kollar
-        const armGeometry = new THREE.CylinderGeometry(0.15, 0.15, 1.2, 16);
-        const armMaterial = new THREE.MeshPhongMaterial({ color: 0xf8d0b0 });
-        
-        const leftArm = new THREE.Mesh(armGeometry, armMaterial);
-        leftArm.rotation.z = Math.PI / 3;
-        leftArm.position.set(-1.0, 0.2, 0);
-        humanGroup.add(leftArm);
-        
-        const rightArm = new THREE.Mesh(armGeometry, armMaterial);
-        rightArm.rotation.z = -Math.PI / 3;
-        rightArm.position.set(1.0, 0.2, 0);
-        humanGroup.add(rightArm);
-        
-        // İnteraktif noktalar için highlight materyalleri
-        const highlightMaterials = {
-            face: new THREE.MeshBasicMaterial({ color: 0xff9999, transparent: true, opacity: 0.7 }),
-            chest: new THREE.MeshBasicMaterial({ color: 0x99ff99, transparent: true, opacity: 0.7 }),
-            abdomen: new THREE.MeshBasicMaterial({ color: 0x9999ff, transparent: true, opacity: 0.7 })
-        };
-        
-        // İnteraktif noktalar (hotspots)
-        const hotspotGeometry = new THREE.SphereGeometry(0.2, 16, 16);
-        
-        const faceHotspot = new THREE.Mesh(hotspotGeometry, highlightMaterials.face);
-        faceHotspot.position.set(0, 1.0, 0.5);
-        faceHotspot.userData = { target: 'face' };
-        humanGroup.add(faceHotspot);
-        
-        const chestHotspot = new THREE.Mesh(hotspotGeometry, highlightMaterials.chest);
-        chestHotspot.position.set(0, 0.2, 0.7);
-        chestHotspot.userData = { target: 'chest' };
-        humanGroup.add(chestHotspot);
-        
-        const abdomenHotspot = new THREE.Mesh(hotspotGeometry, highlightMaterials.abdomen);
-        abdomenHotspot.position.set(0, -0.5, 0.7);
-        abdomenHotspot.userData = { target: 'abdomen' };
-        humanGroup.add(abdomenHotspot);
-        
-        // Tüm hotspotları bir array'e ekleyelim
-        const hotspots = [faceHotspot, chestHotspot, abdomenHotspot];
-        
-        // Raycaster ile tıklama işlemleri
-        const raycaster = new THREE.Raycaster();
-        const mouse = new THREE.Vector2();
-        
-        // Model etiketlerini ilgili hotspotlara bağlama
-        const modelTags = document.querySelectorAll('.model-tag');
-        modelTags.forEach(tag => {
-            tag.addEventListener('click', () => {
-                const target = tag.getAttribute('data-target');
-                highlightBodyPart(target);
-            });
-        });
-        
-        // Vücut bölgesini vurgulama
-        function highlightBodyPart(target) {
-            hotspots.forEach(hotspot => {
-                if (hotspot.userData.target === target) {
-                    // Vurgulanacak hotspot
-                    hotspot.material.opacity = 0.9;
-                    hotspot.scale.set(1.3, 1.3, 1.3);
-                    
-                    // Kamerayı bu noktaya doğru hareket ettir
-                    const position = hotspot.position.clone();
-                    const cameraTarget = new THREE.Vector3(
-                        position.x, 
-                        position.y, 
-                        position.z + 4
-                    );
-                    
-                    // Kamera animasyonu
-                    const startPosition = camera.position.clone();
-                    const endPosition = cameraTarget;
-                    const duration = 1000; // ms
-                    const startTime = Date.now();
-                    
-                    function animateCamera() {
-                        const now = Date.now();
-                        const timeElapsed = now - startTime;
-                        
-                        if (timeElapsed < duration) {
-                            const progress = timeElapsed / duration;
-                            camera.position.lerpVectors(startPosition, endPosition, progress);
-                            camera.lookAt(position);
-                            requestAnimationFrame(animateCamera);
-                        } else {
-                            camera.position.copy(endPosition);
-                            camera.lookAt(position);
-                        }
-                    }
-                    
-                    animateCamera();
-                } else {
-                    // Diğer hotspotlar
-                    hotspot.material.opacity = 0.3;
-                    hotspot.scale.set(1, 1, 1);
-                }
-            });
-        }
-        
-        // Mouse tıklama eventi
-        container.addEventListener('click', onMouseClick, false);
-        
-        function onMouseClick(event) {
-            // Mouse koordinatlarını normalize et
-            const rect = renderer.domElement.getBoundingClientRect();
-            mouse.x = ((event.clientX - rect.left) / rect.width) * 2 - 1;
-            mouse.y = -((event.clientY - rect.top) / rect.height) * 2 + 1;
-            
-            // Raycaster'ı güncelle
-            raycaster.setFromCamera(mouse, camera);
-            
-            // Kesişimleri kontrol et
-            const intersects = raycaster.intersectObjects(hotspots);
-            
-            if (intersects.length > 0) {
-                const target = intersects[0].object.userData.target;
-                highlightBodyPart(target);
-            }
-        }
-        
-        // Animasyon döngüsü
-        function animate() {
-            requestAnimationFrame(animate);
-            
-            // İnsan modelini yavaşça döndür
-            humanGroup.rotation.y += 0.002;
-            
-            controls.update();
-            renderer.render(scene, camera);
-        }
-        
-        // Yükleme tamamlandı, loading ekranını kaldır
-        const loadingElement = document.getElementById('model-loading');
-        if (loadingElement) {
-            loadingElement.style.opacity = 0;
-            setTimeout(() => {
-                loadingElement.style.display = 'none';
-            }, 500);
-        }
-        
-        // Pencere boyutu değiştiğinde yeniden boyutlandır
-        window.addEventListener('resize', () => {
-            const newWidth = container.clientWidth;
-            const newHeight = container.clientHeight;
-            
-            camera.aspect = newWidth / newHeight;
-            camera.updateProjectionMatrix();
-            
-            renderer.setSize(newWidth, newHeight);
-        });
-        
-        // Animasyonu başlat
-        animate();
-    }
-</script>
-                            <script>
-    document.addEventListener('DOMContentLoaded', function() {
-        // İnteraktif model hotspots
-        const hotspots = document.querySelectorAll('.hotspot');
-        
-        hotspots.forEach(hotspot => {
-            hotspot.addEventListener('mouseenter', function() {
-                this.classList.add('group');
-            });
-            
-            hotspot.addEventListener('mouseleave', function() {
-                this.classList.remove('group');
-            });
-            
-            hotspot.addEventListener('click', function() {
-                const id = this.id;
-                const part = id.split('-')[1];
-                
-                // Hotspot efekti
-                hotspots.forEach(spot => {
-                    if (spot.id === id) {
-                        spot.querySelector('.relative').classList.add('scale-125');
-                    } else {
-                        spot.querySelector('.relative').classList.remove('scale-125');
-                    }
-                });
-                
-                // İlgili yere scroll
-                const categorySection = document.getElementById('treatments');
-                if (categorySection) {
-                    categorySection.scrollIntoView({ behavior: 'smooth' });
-                }
-                
-                // İlgili bilgi içeriğini gösterme (geliştirilebilir)
-                console.log(`${part} bölgesi seçildi.`);
-            });
-        });
-    });
-</script>
 </body>
 </html>
