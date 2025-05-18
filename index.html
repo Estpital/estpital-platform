@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estpital - Kapsamlı Estetik Operasyonlar Platformu</title>
+    <meta name="description" content="Estpital, plastik cerrahi, saç ekimi, diş estetiği ve diğer estetik müdahaleler için kapsamlı bir bilgilendirme ve doktor eşleştirme platformudur.">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="min-h-screen bg-gray-50 font-sans">
+    <!-- Navbar -->
+    <nav class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex-shrink-0 flex items-center">
+                    <span class="text-2xl font-bold text-teal-600">Estpital</span>
+                </div>
+                <div class="hidden sm:flex sm:items-center sm:space-x-8">
+                    <a href="#" class="text-gray-700 hover:text-teal-600 px-3 py-2 text-sm font-medium">Operasyonlar</a>
+                    <a href="#" class="text-gray-700 hover:text-teal-600 px-3 py-2 text-sm font-medium">Doktorlar</a>
+                    <a href="#" class="text-gray-700 hover:text-teal-600 px-3 py-2 text-sm font-medium">Hakkımızda</a>
+                    <a href="#" class="text-gray-700 hover:text-teal-600 px-3 py-2 text-sm font-medium">İletişim</a>
+                    <button class="ml-4 bg-teal-600 hover:bg-teal-700 text-white px-4 py-2 rounded-lg text-sm font-medium">
+                        Doktor Girişi
+                    </button>
+                </div>
+                <!-- Mobil menü butonu -->
+                <div class="flex items-center sm:hidden">
+                    <button type="button" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none">
+                        <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative overflow-hidden bg-gradient-to-b from-teal-50 to-white pt-12 pb-16 md:pt-16 md:pb-24">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="lg:grid lg:grid-cols-12 lg:gap-8">
+                <div class="lg:col-span-6">
+                    <h1 class="text-4xl font-extrabold tracking-tight text-gray-900 sm:text-5xl xl:text-6xl">
+                        <span class="block">En İyi Estetik Çözümler</span>
+                        <span class="block text-teal-600">Tek Platformda</span>
+                    </h1>
+                    <p class="mt-6 text-xl text-gray-500">
+                        Türkiye'nin en geniş plastik cerrahi, saç ekimi ve estetik diş 
+                        hekimliği ağına erişin. Bireysel ihtiyaçlarınıza göre en iyi 
+                        doktorları ve tedavileri bulun.
+                    </p>
+                    
+                    <div class="mt-8 flex space-x-4">
+                        <div class="mt-3 rounded-md shadow sm:mt-0 sm:ml-3 flex-grow">
+                            <div class="relative">
+                                <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                                    <svg class="h-5 w-5 text-gray-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                                        <path fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clip-rule="evenodd" />
+                                    </svg>
+                                </div>
+                                <input
+                                    type="text"
+                                    class="focus:ring-teal-500 focus:border-teal-500 block w-full pl-10 pr-3 py-3 border border-gray-300 rounded-md"
+                                    placeholder="Operasyon veya doktor arayın..."
+                                />
+                            </div>
+                        </div>
+                        <button class="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-teal-600 hover:bg-teal-700">
+                            Ara
+                        </button>
+                    </div>
+                    
+                    <div class="mt-8 flex flex-wrap items-center gap-4">
+                        <div class="flex items-center text-sm text-gray-500">
+                            <svg class="h-5 w-5 text-teal-600 mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                            </svg>
+                            <span>400+ Uzman Doktor</span>
+                        </div>
+                        <div class="flex items-center text-sm text-gray-500">
+                            <svg class="h-5 w-5 text-teal-600 mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                            </svg>
+                            <span>50+ Tedavi Çeşidi</span>
+                        </div>
+                        <div class="flex items-center text-sm text-gray-500">
+                            <svg class="h-5 w-5 text-teal-600 mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                            </svg>
+                            <span>Ücretsiz Konsültasyon</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="mt-12 relative lg:mt-0 lg:col-span-6">
+                    <div class="bg-white rounded-xl shadow-xl overflow-hidden">
+                        <!-- 3D İnsan Modeli (Şimdilik bir placeholder) -->
+                        <div class="h-[450px] w-full bg-gradient-to-tr from-teal-100 to-blue-100 flex items-center justify-center">
+                            <div class="text-center p-6">
+                                <div class="text-6xl mb-4">🧑</div>
+                                <h3 class="text-xl font-medium text-gray-700">3D İnsan Modeli</h3>
+                                <p class="text-gray-500 mt-2">Vücudunuzun istediğiniz bölgesini seçerek ilgili tedavileri keşfedin</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Kategoriler Section -->
+    <section class="py-12 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <h2 class="text-3xl font-extrabold text-gray-900 sm:text-4xl">
+                    Tedavi Kategorileri
+                </h2>
+                <p class="mt-3 max-w-2xl mx-auto text-xl text-gray-500 sm:mt-4">
+                    İlgilendiğiniz estetik kategorisini seçerek size uygun tedavileri keşfedin
+                </p>
+            </div>
+
+            <div class="mt-10 grid grid-cols-2 gap-5 sm:grid-cols-3 lg:grid-cols-5">
+                <!-- Kategori 1 -->
+                <a href="/kategoriler/yuz-estetigi" class="flex flex-col items-center p-6 bg-gray-50 rounded-lg border border-gray-100 hover:border-teal-400 transition-all hover:shadow-md">
+                    <span class="text-4xl mb-3">😊</span>
+                    <h3 class="text-lg font-medium text-gray-900">Yüz Estetiği</h3>
+                    <p class="mt-1 text-sm text-gray-500">12 Tedavi</p>
+                </a>
+                
+                <!-- Kategori 2 -->
+                <a href="/kategoriler/vucut-estetigi" class="flex flex-col items-center p-6 bg-gray-50 rounded-lg border border-gray-100 hover:border-teal-400 transition-all hover:shadow-md">
+                    <span class="text-4xl mb-3">💪</span>
+                    <h3 class="text-lg font-medium text-gray-900">Vücut Estetiği</h3>
+                    <p class="mt-1 text-sm text-gray-500">15 Tedavi</p>
+                </a>
+                
+                <!-- Kategori 3 -->
+                <a href="/kategoriler/sac-ekimi" class="flex flex-col items-center p-6 bg-gray-50 rounded-lg border border-gray-100 hover:border-teal-400 transition-all hover:shadow-md">
+                    <span class="text-4xl mb-3">💇</span>
+                    <h3 class="text-lg font-medium text-gray-900">Saç Ekimi</h3>
+                    <p class="mt-1 text-sm text-gray-500">8 Tedavi</p>
+                </a>
+                
+                <!-- Kategori 4 -->
+                <a href="/kategoriler/dis-estetigi" class="flex flex-col items-center p-6 bg-gray-50 rounded-lg border border-gray-100 hover:border-teal-400 transition-all hover:shadow-md">
+                    <span class="text-4xl mb-3">😁</span>
+                    <h3 class="text-lg font-medium text-gray-900">Diş Estetiği</h3>
+                    <p class="mt-1 text-sm text-gray-500">10 Tedavi</p>
+                </a>
+                
+                <!-- Kategori 5 -->
+                <a href="/kategoriler/cilt-bakimi" class="flex flex-col items-center p-6 bg-gray-50 rounded-lg border border-gray-100 hover:border-teal-400 transition-all hover:shadow-md">
+                    <span class="text-4xl mb-3">✨</span>
+                    <h3 class="text-lg font-medium text-gray-900">Cilt Bakımı</h3>
+                    <p class="mt-1 text-sm text-gray-500">14 Tedavi</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Daha fazla bölüm buraya gelecek -->
+    <!-- ... -->
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-sm font-semibold text-gray-400 tracking-wider uppercase">Hakkımızda</h3>
+                    <ul class="mt-4 space-y-4">
+                        <li><a href="#" class="text-gray-300 hover:text-white">Şirketimiz</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white">Doktorlarımız</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white">Basında Biz</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-sm font-semibold text-gray-400 tracking-wider uppercase">Operasyonlar</h3>
+                    <ul class="mt-4 space-y-4">
+                        <li><a href="#" class="text-gray-300 hover:text-white">Yüz Estetiği</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white">Vücut Estetiği</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white">Saç Ekimi</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-sm font-semibold text-gray-400 tracking-wider uppercase">Destek</h3>
+                    <ul class="mt-4 space-y-4">
+                        <li><a href="#" class="text-gray-300 hover:text-white">SSS</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white">İletişim</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white">Gizlilik</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-sm font-semibold text-gray-400 tracking-wider uppercase">İletişim</h3>
+                    <p class="mt-4 text-gray-300">info@estpital.com</p>
+                    <p class="mt-2 text-gray-300">+90 212 XXX XX XX</p>
+                    <div class="flex space-x-6 mt-4">
+                        <a href="#" class="text-gray-400 hover:text-gray-300">
+                            <span class="sr-only">Facebook</span>
+                            <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" />
+                            </svg>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-gray-300">
+                            <span class="sr-only">Instagram</span>
+                            <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 015.45 2.525c.636-.247 1.363-.416 2.427-.465C8.901 2.013 9.256 2 11.685 2h.63z" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-12 border-t border-gray-800 pt-8">
+                <p class="text-gray-400 text-sm text-center">
+                    &copy; 2025 Estpital. Tüm hakları saklıdır.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
