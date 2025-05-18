@@ -1332,4 +1332,41 @@
     });
 </script>
 </body>
+                            <!-- Interactive Model JavaScript -->
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // İnteraktif model hotspots
+        const hotspots = document.querySelectorAll('.hotspot');
+        
+        hotspots.forEach(hotspot => {
+            hotspot.addEventListener('mouseenter', function() {
+                this.classList.add('group');
+            });
+            
+            hotspot.addEventListener('mouseleave', function() {
+                this.classList.remove('group');
+            });
+            
+            hotspot.addEventListener('click', function() {
+                const id = this.id;
+                const part = id.split('-')[1];
+                
+                // Hotspot efekti
+                hotspots.forEach(spot => {
+                    if (spot.id === id) {
+                        spot.querySelector('.relative').classList.add('scale-125');
+                    } else {
+                        spot.querySelector('.relative').classList.remove('scale-125');
+                    }
+                });
+                
+                // İlgili bölüme gitme (opsiyonel)
+                const categorySection = document.getElementById('treatments');
+                if (categorySection) {
+                    categorySection.scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+        });
+    });
+</script>
 </html>
