@@ -23,9 +23,6 @@
     <!-- Animasyon için -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <!-- 3D Model için gerekli kütüphaneler -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/GLTFLoader.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
 </head>
 <body class="min-h-screen font-sans antialiased text-gray-800 bg-gray-50">
     <!-- Üst Bilgi Çubuğu -->
@@ -166,49 +163,16 @@
                 <div class="mt-12 relative lg:mt-0 lg:col-span-6 z-10 animate__animated animate__fadeInRight">
                     <div class="bg-white rounded-xl shadow-2xl overflow-hidden transform hover:rotate-0 transition-transform duration-700 h-full">
                         <div class="p-3 h-full">
-                            <!-- Interactive Model Container -->
-<div class="rounded-lg h-[430px] relative overflow-hidden bg-gradient-to-r from-teal-100 to-blue-100" id="interactive-model-container">
-    <!-- Model Image -->
-    <div class="absolute inset-0 flex items-center justify-center">
-        <img src="public/assets/images/human-body.png" alt="İnsan Vücudu" class="h-full object-contain" id="body-image">
-    </div>
-    
-    <!-- Interactive Hotspots -->
-    <div id="hotspot-face" class="absolute top-1/4 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10 hotspot">
-        <div class="relative">
-            <div class="animate-ping absolute inline-flex h-full w-full rounded-full bg-teal-400 opacity-75" style="width: 20px; height: 20px;"></div>
-            <div class="relative inline-flex rounded-full h-5 w-5 bg-teal-500"></div>
-        </div>
-        <div class="absolute top-0 left-full ml-2 bg-white px-3 py-1 rounded-full shadow-lg text-sm font-medium text-teal-600 whitespace-nowrap border border-teal-200 hidden group-hover:block">
-            Yüz Estetiği
-        </div>
-    </div>
-    
-    <div id="hotspot-chest" class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/4 z-10 hotspot">
-        <div class="relative">
-            <div class="animate-ping absolute inline-flex h-full w-full rounded-full bg-teal-400 opacity-75" style="width: 20px; height: 20px;"></div>
-            <div class="relative inline-flex rounded-full h-5 w-5 bg-teal-500"></div>
-        </div>
-        <div class="absolute top-0 left-full ml-2 bg-white px-3 py-1 rounded-full shadow-lg text-sm font-medium text-teal-600 whitespace-nowrap border border-teal-200 hidden group-hover:block">
-            Göğüs Estetiği
-        </div>
-    </div>
-    
-    <div id="hotspot-abdomen" class="absolute top-3/4 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10 hotspot">
-        <div class="relative">
-            <div class="animate-ping absolute inline-flex h-full w-full rounded-full bg-teal-400 opacity-75" style="width: 20px; height: 20px;"></div>
-            <div class="relative inline-flex rounded-full h-5 w-5 bg-teal-500"></div>
-        </div>
-        <div class="absolute top-0 left-full ml-2 bg-white px-3 py-1 rounded-full shadow-lg text-sm font-medium text-teal-600 whitespace-nowrap border border-teal-200 hidden group-hover:block">
-            Karın Estetiği
-        </div>
-    </div>
-    
-    <!-- Fallback Message -->
-    <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
-        <div class="bg-white bg-opacity-80 rounded-lg p-4 shadow-md">
-            <h3 class="text-xl font-medium text-gray-700">İnteraktif İnsan Modeli</h3>
-            <p class="text-gray-500 mt-2">Vücudunuzun ilgilendiğiniz bölgesini seçin</p>
+                            <!-- Basit Model Gösterimi -->
+<div class="bg-gradient-to-r from-teal-100 to-blue-100 rounded-lg h-[430px] flex items-center justify-center relative">
+    <div class="text-center p-6">
+        <div class="text-6xl mb-4">👤</div>
+        <h3 class="text-xl font-medium text-gray-700">İnteraktif İnsan Modeli</h3>
+        <p class="text-gray-500 mt-2">Vücudunuzun istediğiniz bölgesini seçerek ilgili tedavileri keşfedin</p>
+        <div class="flex flex-wrap justify-center gap-2 mt-4">
+            <button class="bg-teal-500 text-white px-3 py-1 rounded-full text-sm hover:bg-teal-600 transition-colors">Yüz</button>
+            <button class="bg-teal-500 text-white px-3 py-1 rounded-full text-sm hover:bg-teal-600 transition-colors">Göğüs</button>
+            <button class="bg-teal-500 text-white px-3 py-1 rounded-full text-sm hover:bg-teal-600 transition-colors">Karın</button>
         </div>
     </div>
 </div>
@@ -1332,41 +1296,4 @@
     });
 </script>
 </body>
-                            <!-- Interactive Model JavaScript -->
-<script>
-    document.addEventListener('DOMContentLoaded', function() {
-        // İnteraktif model hotspots
-        const hotspots = document.querySelectorAll('.hotspot');
-        
-        hotspots.forEach(hotspot => {
-            hotspot.addEventListener('mouseenter', function() {
-                this.classList.add('group');
-            });
-            
-            hotspot.addEventListener('mouseleave', function() {
-                this.classList.remove('group');
-            });
-            
-            hotspot.addEventListener('click', function() {
-                const id = this.id;
-                const part = id.split('-')[1];
-                
-                // Hotspot efekti
-                hotspots.forEach(spot => {
-                    if (spot.id === id) {
-                        spot.querySelector('.relative').classList.add('scale-125');
-                    } else {
-                        spot.querySelector('.relative').classList.remove('scale-125');
-                    }
-                });
-                
-                // İlgili bölüme gitme (opsiyonel)
-                const categorySection = document.getElementById('treatments');
-                if (categorySection) {
-                    categorySection.scrollIntoView({ behavior: 'smooth' });
-                }
-            });
-        });
-    });
-</script>
 </html>
